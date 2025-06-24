@@ -1,6 +1,6 @@
 /* Responsividade */
 @charset "UTF-8";
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 680px) {
       
 	header {
 	 display:flex;
@@ -35,7 +35,7 @@
         align-items: center;
         text-align: center;
         justify-content: center;
-        margin: 45px 25px 5px 25px;
+        margin: 45px 30px 5px 30px;
        }
 
        .content-saibamais{
@@ -52,8 +52,8 @@
 
     }
     .topo{
-      left: 5px;
-      bottom: 12.5%;
+      right: 5%;
+      bottom: 6%;
     }
         
     .topo img{
@@ -78,7 +78,7 @@
     .whatsapp-button {
       width: 40px;
       height: 40px;
-      right:5px;
+      right:5%;
       bottom: 12.5%;
     }
 
