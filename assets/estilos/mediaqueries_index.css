@@ -36,7 +36,6 @@
         text-align: center;
         justify-content: center;
         margin: 45px 20px 5px 20px;
-        overflow: hidden;
        }
        .content-recicla_text, .content-recicla_text02{
         max-width: 95vw;
@@ -44,7 +43,6 @@
        .content-recicla_container img{
         max-width: 100vw;
        }
-
 
        .content-saibamais{
         flex-direction: column;
@@ -77,6 +75,12 @@
       width:97vw ;
       height: 50vh;
       justify-content: space-evenly;
+    }
+    .container-img img{
+      width:40%;
+    }
+    .container-img #imagem{
+      width:90%;
     }
 
     .whatsapp-icon {

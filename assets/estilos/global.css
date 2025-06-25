@@ -15,7 +15,9 @@
       scroll-margin-top: 8em;
     }
 
-
+      body{
+        overflow-x: hidden;
+      }
       main {
       max-width: 1280px;
       margin: 0 auto;
