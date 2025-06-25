@@ -10,18 +10,19 @@
     }
     html {
        scroll-behavior: smooth;
+       overflow-x: hidden;
      }
      :target {
       scroll-margin-top: 8em;
     }
 
       body{
-        overflow-x: hidden;
+       overflow-x: hidden;
+
       }
       main {
-      max-width: 1280px;
-      margin: 0 auto;
-      overflow: hidden;
+       max-width: 1280px;
+       margin: 0 auto;
  }
     h1 {
       font-family: "Roboto", sans-serif;
