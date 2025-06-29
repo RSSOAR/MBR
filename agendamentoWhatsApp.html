@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Formulário de Agendamento</title>
+
+  <!-- Biblioteca PDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      margin: 20px;
+    }
+    form {
+      max-width: 700px;
+      margin: 0 auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    fieldset {
+      border: none;
+      margin-bottom: 1.5rem;
+    }
+    legend {
+      font-weight: bold;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+    .input-wrapper,
+    .textarea-wrapper {
+      margin-bottom: 1rem;
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin-bottom: 4px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+    .flex {
+      display: flex;
+      gap: 1rem;
+    }
+    .flex-1 { flex: 1; }
+    .flex-2 { flex: 2; }
+    .actions-wrapper {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .btn-primary,
+    .btn-secondary {
+      padding: 12px 24px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
+    }
+    .btn-primary {
+      background-color: #25D366;
+      color: #fff;
+    }
+    .btn-primary:hover { background-color: #1ebc59; }
+    .btn-secondary {
+      background-color: #ccc;
+      color: #333;
+    }
+    .btn-secondary:hover { background-color: #bbb; }
+    .btn-primary img {
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+    .radio-wrapper {
+      display: flex;
+      gap: 2rem;
+    }
+    .radio-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .radio-inner label {
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+<form id="meuFormulario">
+  <fieldset>
+    <legend>Informações para agendamento</legend>
+    <div class="input-wrapper">
+      <label for="fullname">Nome completo</label>
+      <input id="fullname" type="text" name="fullname" placeholder="Digite seu nome completo">
+    </div>
+    <div class="input-wrapper">
+      <label for="company">Nome da empresa</label>
+      <input id="company" type="text" name="company" placeholder="Digite o nome da empresa">
+    </div>
+    <div class="input-wrapper">
+      <label for="email">Email</label>
+      <input id="email" type="email" name="email" placeholder="Digite seu melhor email">
+    </div>
+    <div class="input-wrapper">
+      <label for="phone">Telefone</label>
+      <input type="tel" name="phone" id="phone" placeholder="(xx) xxxxx-xxxx">
+    </div>
+    <div class="input-wrapper">
+      <label for="data">Data do agendamento</label>
+      <input type="date" id="data" lang="pt-br" name="data">
+    </div>
+    <fieldset>
+      <legend>Opções de coleta</legend>
+      <div class="input-wrapper">
+        <label>Selecione o turno para coleta</label>
+        <div class="radio-wrapper">
+          <div class="radio-inner">
+            <input type="radio" name="study-shif" value="morning" id="morning">
+            <label for="morning">Manhã</label>
+          </div>
+          <div class="radio-inner">
+            <input type="radio" name="study-shif" value="evening" id="evening">
+            <label for="evening">Tarde</label>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </fieldset>
+
+  <fieldset>
+    <legend>Endereço de retirada</legend>
+    <div class="input-wrapper">
+      <label for="CEP">CEP</label>
+      <input type="text" id="CEP" name="CEP">
+    </div>
+    <div class="flex">
+      <div class="input-wrapper flex-2">
+        <label for="Street">Rua</label>
+        <input type="text" id="Street" name="Street">
+      </div>
+      <div class="input-wrapper flex-1">
+        <label for="number">Número</label>
+        <input type="number" id="number" name="number">
+      </div>
+    </div>
+    <div class="flex">
+      <div class="input-wrapper flex-2">
+        <label for="city">Cidade</label>
+        <input type="text" id="city" name="city" placeholder="Rio de Janeiro">
+      </div>
+      <div class="input-wrapper flex-1">
+        <label for="estado">Estado</label>
+        <select id="estado" name="estado">
+          <option value="RJ" selected>RJ</option>
+          <option value="SP">SP</option>
+          <option value="MG">MG</option>
+        </select>
+      </div>
+    </div>
+    <div class="textarea-wrapper">
+      <label for="medical-info">Digite sua dúvida</label>
+      <textarea name="medical-info" id="medical-info" placeholder="Digite sua dúvida aqui." cols="30" rows="5"></textarea>
+    </div>
+  </fieldset>
+
+  <div class="actions-wrapper">
+    <button class="btn-secondary" type="reset">Limpar Respostas</button>
+    <button class="btn-primary" type="submit">
+      <img src="https://img.icons8.com/ios-filled/20/ffffff/whatsapp.png" alt="WhatsApp">
+      Fazer Agendamento
+    </button>
+  </div>
+</form>
+
+<script>
+  // Máscaras
+  document.getElementById("phone").addEventListener("input", function () {
+    let valor = this.value.replace(/\D/g, "");
+    if (valor.length > 11) valor = valor.slice(0, 11);
+    if (valor.length > 6) {
+      this.value = `(${valor.slice(0, 2)}) ${valor.slice(2, 7)}-${valor.slice(7)}`;
+    } else if (valor.length > 2) {
+      this.value = `(${valor.slice(0, 2)}) ${valor.slice(2)}`;
+    } else {
+      this.value = valor;
+    }
+  });
+
+  document.getElementById("CEP").addEventListener("blur", function () {
+    const cep = this.value.replace(/\D/g, "");
+    if (cep.length !== 8) return;
+    fetch(`https://viacep.com.br/ws/${cep}/json/`)
+      .then(res => res.json())
+      .then(data => {
+        if (!data.erro) {
+          document.getElementById("Street").value = data.logradouro || '';
+          document.getElementById("city").value = data.localidade || '';
+          document.getElementById("estado").value = data.uf || 'RJ';
+        } else {
+          alert("CEP não encontrado.");
+        }
+      })
+      .catch(() => alert("Erro ao buscar o endereço pelo CEP."));
+  });
+
+  document.getElementById("meuFormulario").addEventListener("submit", async function (event) {
+    event.preventDefault();
+    const form = event.target;
+    const camposObrigatorios = ["fullname", "company", "email", "phone", "data", "CEP", "Street", "number", "city"];
+    let mensagemErro = "";
+    camposObrigatorios.forEach(id => {
+      const valor = form[id].value.trim();
+      if (!valor) mensagemErro += `- Campo ${id} é obrigatório.\n`;
+    });
+
+    const email = form.email.value;
+    const telefone = form.phone.value.replace(/\D/g, "");
+    const turno = form["study-shif"].value;
+    if (!/\S+@\S+\.\S+/.test(email)) mensagemErro += "- E-mail inválido.\n";
+    if (telefone.length < 10) mensagemErro += "- Telefone inválido.\n";
+    if (!turno) mensagemErro += "- Selecione o turno.\n";
+
+    if (mensagemErro) return alert("Corrija os erros:\n" + mensagemErro);
+
+    const nome = form.fullname.value;
+    const empresa = form.company.value;
+    const data = form.data.value;
+    const rua = form.Street.value;
+    const numero = form.number.value;
+    const cidade = form.city.value;
+    const estado = form.estado.value;
+    const cep = form.CEP.value;
+    const duvida = form["medical-info"].value || "(Não informado)";
+    const turnoTexto = turno === "morning" ? "Manhã" : "Tarde";
+
+    const mensagem =
+`*Formulário de Agendamento:*
+
+*Nome:* ${nome}
+*Empresa:* ${empresa}
+*E-mail:* ${email}
+*Telefone:* ${form.phone.value}
+*Data do agendamento:* ${data}
+*Turno:* ${turnoTexto}
+
+*Endereço de retirada:*
+Rua: ${rua}, Nº ${numero}
+Cidade: ${cidade} - ${estado}
+CEP: ${cep}
+
+*Dúvida:* ${duvida}`;
+
+    // WhatsApp
+    const numeroWhatsApp = "5521995588692"; // Altere para seu número
+    const link = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
+    window.open(link, "_blank");
+    alert("Agendamento iniciado com sucesso! Você será redirecionado ao WhatsApp.");
+  });
+</script>
+
+</body>
+</html>
