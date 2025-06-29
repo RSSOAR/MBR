@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Contato</title>
+   <script type="application/ld+json"> {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "MBR Reciclagem de óleo vegetal",
+    "image": "",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Honduras 25",
+      "addressLocality": "Penha",
+      "addressRegion": "RJ",
+      "postalCode": "21020-210",
+      "addressCountry": "BR"
+    },
+    "telephone": "+55 21 3654-3128",
+    "email": "mbr@gmail.com",
+    "url": "https://www.seusite.com.br",
+    "priceRange": "$$",
+    "openingHours": "Mo-Fr 08:00-18:00",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -22.8344,
+      "longitude": -43.27725
+    }
+  }
+  </script>
+
+  <link rel="stylesheet" href="./assets/estilos/contato.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<header>
+      <section class="section-header">
+        <a href="./index.html" class="logo">
+          <img src="./assets/IMG/Logo_MBR.png" alt="Logo da MBR Reciclagem"/>
+        </a>
+        <nav>
+          <a href="./index.html">HOME</a>
+          <a href="./quem-somos.html">QUEM SOMOS</a>
+          <a href="#servico">COLETA DE ÓLEO</a>
+          <a href="./contato.html" rel="next">CONTATO</a>
+          <a id="item_coleta" href="https://wa.me/2136543128" target="_blank">SOLICITAR COLETA</a>
+        </nav>
+      </section>		
+      <section class="header-menu_toggle">
+        <div class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+      </section>
+    </header>
+<!-- Menu Mobile -->
+    <section class="section-mobile_menu">
+      <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <div class="close-btn" id="close-btn" aria-label="Fechar menu">&times;</div>
+        <a href="./index.html" tabindex="-1">HOME</a>
+        <a href="./quem-somos.html" tabindex="-1">QUEM SOMOS</a>
+        <a href="#servico" tabindex="-1">COLETA DE ÓLEO</a>
+        <a href="./contato.html" tabindex="-1">Contato</a>
+        <a href="https://wa.me/2136543128" target="_blank" tabindex="-1">Solicitar Coleta</a>
+      </div>
+    </section>
+<body>
+  <div id="app">
+    <main>
+      <div class="main-container"> 
+        <h1>CONTATO</h1>
+        <div class="back">
+          <img src="assets/icons/icon01 - setaEsq.svg" alt="Voltar">
+          <a href="./index.html">
+          <span>Voltar</span></a>
+        </div>
+
+        <h2>Formulário de Agendamento</h2>
+        <p>Preencha os dados abaixo para agendar sua coleta.</p>
+
+        <form id="meuFormulario">
+          <fieldset class="child-info">
+            <legend>Informações para agendamento</legend>
+
+            <div class="input-wrapper">
+              <label for="fullname">Nome completo</label>
+              <input id="fullname" type="text" name="fullname" placeholder="Digite seu nome completo">
+            </div>
+            <div class="input-wrapper">
+              <label for="company">Nome da empresa</label>
+              <input id="company" type="text" name="company" placeholder="Digite o nome da empresa">
+            </div>
+            <div class="input-wrapper">
+              <label for="email">Email</label>
+              <input id="email" type="email" name="email" placeholder="Digite seu melhor email">
+            </div>
+            <div class="input-wrapper">
+                <label for="phone">Telefone</label>
+                <input type="tel" name="phone" id="phone" placeholder="(xx) xxxxx-xxxx">
+            </div>
+           
+            <div class="input-wrapper">
+              <label for="data">Data do agendamento</label>
+              <input type="date" id="data" lang="pt-br" name="data">
+            </div>
+            <fieldset class="enroll-options">
+              <legend>Opções de coleta</legend>
+              <div class="input-wrapper">
+              <label >Selecione o turno para coleta</label>
+
+              <div class="radio-wrapper">
+
+                <div class="radio-inner">
+                  <div class="radio-image"></div>
+                  <input type="radio" name="study-shif" value="morning" id="morning">
+                  <img src="assets/icons/icon02.png" alt="icone de nuvem com sol">
+                  <label for="morning">Manhã</label>
+                </div>
+
+                <div class="radio-inner">
+                  <div class="radio-image"></div>
+                  <input type="radio" name="study-shif" value="evening" id="evening">
+                  <img src="assets/icons/icon01.png" alt="icone de sol">
+                  <label for="evening">Tarde</label>
+                </div>
+
+              </div>
+
+              </div>
+            </fieldset>
+
+
+            
+            <!--</div>-->
+
+          </fieldset>
+
+          <fieldset class="address">
+            <legend>Endereço de retirada</legend>
+            <div class="input-wrapper">
+              <label for="cep">CEP</label>
+              <input type="text" id="CEP" name="CEP">
+            </div>
+
+            <div class="flex">
+              <div class="input-wrapper flex-2">
+                <label for="Street">Rua</label>
+                <input type="text" id="Street" name="Street">
+              </div>
+                        
+              <div class="input-wrapper flex-1">
+                <label for="number">Número</label>
+                <input type="number" id="number" name="number">
+              </div>
+            </div>
+            <div class="input-wrapper flex-2">
+                <label for="complemento">Complemento</label>
+                <input type="text" id="complemento" name="complemento">
+              </div> 
+            <div class="flex">
+              <div class="input-wrapper flex-2">
+                <label for="city">Cidade</label>
+                <input type="text" id="city" name="city" placeholder= "Rio de Janeiro">
+              </div>
+                        
+              <div class="input-wrapper flex-1">
+                <label for="state">Estado</label>
+                <select id="estado" name="estado" value="RJ">
+                  <option value="AC">AC</option>
+                  <option value="AL">AL</option>
+                  <option value="AP">AP</option>
+                  <option value="AM">AM</option>
+                  <option value="BA">BA</option>
+                  <option value="CE">CE</option>
+                  <option value="DF">DF</option>
+                  <option value="ES">ES</option>
+                  <option value="GO">GO</option>
+                  <option value="MA">MA</option>
+                  <option value="MT">MT</option>
+                  <option value="MS">MS</option>
+                  <option value="MG">MG</option>
+                  <option value="PA">PA</option>
+                  <option value="PB">PB</option>
+                  <option value="PR">PR</option>
+                  <option value="PE">PE</option>
+                  <option value="PI">PI</option>
+                  <option value="RJ" selected>RJ</option>
+                  <option value="RN">RN</option>
+                  <option value="RS">RS</option>
+                  <option value="RO">RO</option>
+                  <option value="RR">RR</option>
+                  <option value="SC">SC</option>
+                  <option value="SP">SP</option>
+                  <option value="SE">SE</option>
+                  <option value="TO">TO</option>
+                </select>
+              </div>
+
+            </div>
+            <div class="textarea-wrapper">
+              <label for="medical-info">Digite sua dúvida</label>
+              <textarea name="medical-info" id="medical-info" placeholder="Digite sua dúvida aqui." cols="30" rows="5"></textarea>
+            </div>
+
+          </fieldset>
+          <div class="actions-wrapper">
+            <button class="btn-secondary" type="reset">Limpar Respostas</button>
+            <button class="btn-primary" type="submit">Fazer Agendamento</button>
+          </div>
+
+        </form>
+
+      </div>
+    </main>
+    <aside>
+      <div class="aside-container"> 
+        <h2>Nossa localização</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3677.1475276003744!2d-43.28029672469187!3d-22.834030779306364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997bbd8c4f51fd%3A0x4d9704f45ecf2e3!2sR.%20Honduras%2C%2025%20-%20Penha%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2021020-210!5e0!3m2!1spt-BR!2sbr!4v1750956627569!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+      </div>
+    </aside>
+  </div>
+  <!--<footer>
+          <div class="footer-area_container">
+            <section class="footer-container_contato"aria-labelledby="contato-titulo">
+                <div class="footer-container_img">
+                  <img src="./assets/IMG/Logo_MBR.png" alt="Logo" class="logo" />
+                </div>
+                <div class="footer-navegacao" aria-label="Links de navegação">
+                  <h2>Navegação</h2>
+                  <a href="./index.html">HOME</a>
+                  <a href="./quem-somos">QUEM SOMOS</a>
+                  <a href="#servico">COLETA DE ÓLEO</a>
+                  <a href="#contato">CONTATO</a>
+                </div>
+                <div class="footer-contato" aria-label="contatos">
+                    <h2 id="contato-titulo">Contato</h2>
+                <address>
+                    <i class="fas fa-map-marker-alt" style="color:rgb(222, 12, 12)"></i>Rua Honduras 25 - Penha/RJ <br>
+                    <i class="fa-brands fa-whatsapp" style="color:#039803"></i><a href="tel:+552136543128">(21) 3654-3128</a><br>
+                    <i class="fa-solid fa-square-phone"></i><a href="tel:+5521999650670">(21) 99965-0670</a><br>
+                    <i class="fas fa-phone-altfa-solid fa-square-phone"></i><a href="tel:+5521968411741">(21) 96841-1741</a><br>
+                    <i class="fas fa-envelope"></i> <a href="mailto:biolitoral@gmail.com">mbrreciclagem@gmail.com</a>
+                  </address>
+                </div>
+            </section>
+          </div>  
+          <div class="copywrite">
+            <span>&copy; 2025 MBR RECILAGEM - Todos os direitos reservados.</span>
+          </div > 
+  </footer> -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="./assets/JS/script.js"></script> 
+    <!-- Configuração de envio do formulário para o WhatsApp-->
+    <script>
+  // Máscaras
+  document.getElementById("phone").addEventListener("input", function () {
+    let valor = this.value.replace(/\D/g, "");
+    if (valor.length > 11) valor = valor.slice(0, 11);
+    if (valor.length > 6) {
+      this.value = `(${valor.slice(0, 2)}) ${valor.slice(2, 7)}-${valor.slice(7)}`;
+    } else if (valor.length > 2) {
+      this.value = `(${valor.slice(0, 2)}) ${valor.slice(2)}`;
+    } else {
+      this.value = valor;
+    }
+  });
+
+  document.getElementById("CEP").addEventListener("blur", function () {
+    const cep = this.value.replace(/\D/g, "");
+    if (cep.length !== 8) return;
+    fetch(`https://viacep.com.br/ws/${cep}/json/`)
+      .then(res => res.json())
+      .then(data => {
+        if (!data.erro) {
+          document.getElementById("Street").value = data.logradouro || '';
+          document.getElementById("city").value = data.localidade || '';
+          document.getElementById("estado").value = data.uf || 'RJ';
+        } else {
+          alert("CEP não encontrado.");
+        }
+      })
+      .catch(() => alert("Erro ao buscar o endereço pelo CEP."));
+  });
+
+  document.getElementById("meuFormulario").addEventListener("submit", async function (event) {
+    event.preventDefault();
+    const form = event.target;
+    const camposObrigatorios = ["fullname", "email", "phone", "data", "CEP", "Street", "number", "city"];
+    let mensagemErro = "";
+    camposObrigatorios.forEach(id => {
+      const valor = form[id].value.trim();
+      if (!valor) mensagemErro += `- Campo ${id} é obrigatório.\n`;
+    });
+
+    const email = form.email.value;
+    const telefone = form.phone.value.replace(/\D/g, "");
+    const turno = form["study-shif"].value;
+    if (!/\S+@\S+\.\S+/.test(email)) mensagemErro += "- E-mail inválido.\n";
+    if (telefone.length < 10) mensagemErro += "- Telefone inválido.\n";
+    if (!turno) mensagemErro += "- Selecione o turno.\n";
+
+    if (mensagemErro) return alert("Corrija os erros:\n" + mensagemErro);
+
+    const nome = form.fullname.value;
+    const empresa = form.company.value;
+    const dataISO = form.data.value;
+    const [ano, mes, dia] = dataISO.split("-");
+    const data = `${dia}/${mes}/${ano.slice(2)}`;
+    //const data = form.data.value;
+    const rua = form.Street.value;
+    const numero = form.number.value;
+    const complemento = form.complemento.value;
+    const cidade = form.city.value;
+    const estado = form.estado.value;
+    const cep = form.CEP.value;
+    const duvida = form["medical-info"].value || "(Não informado)";
+    const turnoTexto = turno === "morning" ? "Manhã" : "Tarde";
+    
+    const mensagem =
+`*Solicitação de Agendamento:*
+
+*Nome:* ${nome}
+*Empresa:* ${empresa}
+*E-mail:* ${email}
+*Telefone:* ${form.phone.value}
+*Data do agendamento:* ${data}
+*Turno:* ${turnoTexto}
+
+*Endereço de retirada:*
+Rua: ${rua}, Nº ${numero}, ${complemento}
+Cidade: ${cidade} - ${estado}
+CEP: ${cep}
+
+*Dúvida:* ${duvida}`;
+
+    // WhatsApp
+    const numeroWhatsApp = "5521995588692"; // Altere para seu número
+    const link = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
+    window.open(link, "_blank");
+    alert("Agendamento iniciado com sucesso! Você será redirecionado ao WhatsApp.");
+  });
+    </script>
+</body>
+</html>
