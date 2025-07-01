@@ -1,7 +1,7 @@
 @import url(./contato.css);
 body{
   position: relative;
-  background-image: url("../IMG/img05-reciclagem.png");
+  background-image: url("../IMG/img-modal.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -47,7 +47,7 @@ main .main-container{
 	inset:0;  /* Atalho para todos os lados do position (right, left, top, bottom) */
 	width:100vw;
 	height:100vh;
-	background: linear-gradient(109deg, rgba(10, 12, 16, 0.80) 15%, rgba(10, 12, 16, 0.60) 50%, rgba(10, 12, 16,0.80) 85%);
+	background: linear-gradient(109deg, rgba(10, 12, 16, 0.90) 15%, rgba(10, 12, 16, 0.70) 50%, rgba(10, 12, 16,0.90) 85%);
 }
 
 /* Configuração Celular */

@@ -566,10 +566,11 @@ footer .copywrite{
     /* HEADER */
   header {
     display: flex;
-    position:static;
+    position: static;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+    z-index: 1000;
   }
 
   header nav {
@@ -583,8 +584,7 @@ footer .copywrite{
   #app {
     display: block;
     height: auto;
-    overflow: auto;
-    padding-top:10px ;
+    padding-top:20px ;
   }
 
   main, aside {
@@ -647,6 +647,9 @@ footer .copywrite{
 
 /* ========== RESPONSIVO: TABLET ========== */
 @media (min-width: 769px) and (max-width: 920px) {
+  header{
+    z-index:1000;
+  }
   #app {
     display: block;
     height: auto;
