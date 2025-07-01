@@ -684,6 +684,7 @@ footer .copywrite{
 
   button {
     flex: 1 1 45%;
+    text-align: center;
   }
 
   .address .flex {

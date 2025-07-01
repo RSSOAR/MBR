@@ -80,5 +80,10 @@ main .main-container{
 	.modal{
 	 width:99vw;
    height: 100vh;
-}
+  }
+  button {
+    flex: 1 1 45%;
+    text-align: center;
+  }
+
 }
