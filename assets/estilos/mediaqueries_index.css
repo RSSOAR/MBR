@@ -1,6 +1,6 @@
 /* Responsividade */
 @charset "UTF-8";
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 767px) {
 
 	header {
 	 display:flex;
@@ -156,16 +156,75 @@
     }
 
 }
-      
+
+/* Configuração Tablet */
+@media screen and (min-width: 48.001rem) and (max-width: 55rem){
+
+  .content-text {
+    min-width:55%;
+  }
+  .content-img{
+    margin:0 auto;
+  }
+	
+	.content-one h1{
+		font-size: 2rem;
+	}
+	
+	.content-one p{
+		font-size: 1.3rem
+	}
+	.img-background{
+	    padding:100px 0;
+	    padding-inline: 25px;
+      align-items:self-start;
+	    }
+
+  .content-reciclagem{
+		display:flex;
+		flex-direction: column;
+		align-items:center;
+		justify-content: center;
+		margin: 45px 15px 5px 15px;
+
+    & .content-recicla_container{
+      flex-direction: column;
+      min-width: 98vw;
+
+
+      & .content-recicla_img, .content-recicla_img02, .content-recicla_img03 {
+        width: 100%;
+
+        & img{
+          min-width: 100%;
+        }      
+
+      }
 
       
-	      
-      
-    
-   
-    @media screen and (width >=1280px){
-      main{
-        max-width: 1200px;
-      }
     }
+		
+	}
+  .container-img{
+    height: 50vh;
+    text-align:justify;
+  }
+  .content-saibamais{
+    flex-direction: column;
+    align-items: center;
+    margin-top:40px;
+
+    & h4{
+      font-size:2rem ;
+       margin-bottom: 18px;
+    }
+  }
+}
+
+   
+@media screen and (width >=1280px){
+  main{
+    max-width: 1200px;
+  }
+}
     

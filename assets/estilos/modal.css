@@ -1,0 +1,84 @@
+@import url(./contato.css);
+body{
+  position: relative;
+  background-image: url("../IMG/img05-reciclagem.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#app{
+  display:flex;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 30px;
+}
+main{
+  width:70%;
+  background-color: rgba(255, 255, 255, 0.9);
+
+  & .main-container .back img{
+    width: 25px;
+  }
+
+  & .main-container .back span{
+    font-size: 1.3rem;
+  }
+
+
+}
+main .main-container{
+  width: 100%;
+  max-width: 90rem;
+  margin-left: auto;
+
+}
+
+.modal{
+	background-color: transparent;
+	z-index:4000;
+	position: fixed;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+}
+.mascara-modal{ 
+ 	transition: visibility 1s linear ;
+	z-index: 3000;
+	position: fixed;
+	inset:0;  /* Atalho para todos os lados do position (right, left, top, bottom) */
+	width:100vw;
+	height:100vh;
+	background: linear-gradient(109deg, rgba(10, 12, 16, 0.80) 15%, rgba(10, 12, 16, 0.60) 50%, rgba(10, 12, 16,0.80) 85%);
+}
+
+/* Configuração Celular */
+@media  (min-width: 320px) and (max-width:920px){
+
+  body{
+    position:static;
+    background:none;
+  }
+
+	main{
+		width:100%;
+		& .main-container .back img{
+			width: 18px;
+		}
+		
+		& .main-container .back span{
+			font-size: 0.9rem;
+		}
+		
+	}
+	
+	main .main-container{
+		max-width: 90vw;
+	}
+	
+  .mascara-modal{
+    visibility: hidden;
+  }
+	.modal{
+	 width:99vw;
+   height: 100vh;
+}
+}
