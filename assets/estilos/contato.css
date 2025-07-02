@@ -545,6 +545,7 @@ input{
     min-width: 90vw;
     margin: 0 auto;
     text-align: center;
+    padding-bottom: 70px;
   }
   .aside-container h3 {
     font-size: 1.5rem;

@@ -118,7 +118,8 @@ main .main-container{
   }
 
   #btn-topo{
-    right: 12px;
+    right: 15px;
+    bottom: 18px;
   }
 
 }
