@@ -1,5 +1,5 @@
-  <!DOCTYPE html>
-  <html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +8,10 @@
   </head>
   <body>
       
-      <div class="modal">
-        <div id="app">
+      <div class="modal" >
+        <div id="app" >
           <main>
-            <div class="main-container"> 
+            <div class="main-container" id="topo"> 
               <h1>AGENDAR COLETA</h1>
               <div class="back">
                 <img src="assets/icons/icon01 - setaEsq.svg" alt="Voltar">
@@ -155,44 +155,48 @@
               </form>
 
             </div>
+             <a href="#topo"  id="btn-topo">
+                <img src="./assets/IMG/circle-uo.png" alt="Icone de voltar ao topo da página">
+             </a href="#topo">
           </main>
         </div>
       </div>
       <div class="mascara-modal">
         
       </div>
-      <script>
-    // Máscaras
-    document.getElementById("phone").addEventListener("input", function () {
-      let valor = this.value.replace(/\D/g, "");
-      if (valor.length > 11) valor = valor.slice(0, 11);
-      if (valor.length > 6) {
-        this.value = `(${valor.slice(0, 2)}) ${valor.slice(2, 7)}-${valor.slice(7)}`;
-      } else if (valor.length > 2) {
-        this.value = `(${valor.slice(0, 2)}) ${valor.slice(2)}`;
-      } else {
-        this.value = valor;
-      }
-    });
 
-    document.getElementById("CEP").addEventListener("blur", function () {
-      const cep = this.value.replace(/\D/g, "");
-      if (cep.length !== 8) return;
-      fetch(`https://viacep.com.br/ws/${cep}/json/`)
-        .then(res => res.json())
-        .then(data => {
-          if (!data.erro) {
-            document.getElementById("Street").value = data.logradouro || '';
-            document.getElementById("city").value = data.localidade || '';
-            document.getElementById("estado").value = data.uf || 'RJ';
-          } else {
-            alert("CEP não encontrado.");
-          }
-        })
-        .catch(() => alert("Erro ao buscar o endereço pelo CEP."));
-    });
+    <script>
+      // Máscaras
+      document.getElementById("phone").addEventListener("input", function () {
+        let valor = this.value.replace(/\D/g, "");
+        if (valor.length > 11) valor = valor.slice(0, 11);
+        if (valor.length > 6) {
+          this.value = `(${valor.slice(0, 2)}) ${valor.slice(2, 7)}-${valor.slice(7)}`;
+        } else if (valor.length > 2) {
+          this.value = `(${valor.slice(0, 2)}) ${valor.slice(2)}`;
+        } else {
+          this.value = valor;
+        }
+      });
 
-    document.getElementById("meuFormulario").addEventListener("submit", async function (event) {
+      document.getElementById("CEP").addEventListener("blur", function () {
+        const cep = this.value.replace(/\D/g, "");
+        if (cep.length !== 8) return;
+        fetch(`https://viacep.com.br/ws/${cep}/json/`)
+          .then(res => res.json())
+          .then(data => {
+            if (!data.erro) {
+              document.getElementById("Street").value = data.logradouro || '';
+              document.getElementById("city").value = data.localidade || '';
+              document.getElementById("estado").value = data.uf || 'RJ';
+            } else {
+              alert("CEP não encontrado.");
+            }
+          })
+          .catch(() => alert("Erro ao buscar o endereço pelo CEP."));
+      });
+
+      document.getElementById("meuFormulario").addEventListener("submit", async function (event) {
       event.preventDefault();
       const form = event.target;
       const camposObrigatorios = ["fullname", "email", "phone", "data", "CEP", "Street", "number", "city"];
@@ -249,7 +253,28 @@
       window.open(link, "_blank");
       alert("Agendamento iniciado com sucesso! Você será redirecionado ao WhatsApp.");
     });
-      </script>
+    
+      // Configuração Botão Voltar ao Topo
+      const btnTopo = document.getElementById("btn-topo");
 
+      window.addEventListener("scroll", () => {
+        const scrollTotal = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollAtual = window.scrollY;
+
+        if (scrollAtual > scrollTotal * 0.8) {
+          btnTopo.classList.add("show");
+        } else {
+          btnTopo.classList.remove("show");
+        }
+      });
+
+      btnTopo.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      });
+
+    </script>
   </body>
-  </html>
+</html>
