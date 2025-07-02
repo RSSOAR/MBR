@@ -39,11 +39,15 @@ header  .section-header{
      width: 100vw;
 	   display: flex;
 	   max-width: 1280px;
-     margin: auto;
      align-items: end;
 	   justify-content:space-between;
+     margin: auto;
      padding-inline:3%;
-
+}
+.nav-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 .logo > img {
       transition: height 0.3s ease;
@@ -566,25 +570,29 @@ footer .copywrite{
     /* HEADER */
   header {
     display: flex;
-    position: static;
-    justify-content: space-between;
-    align-items: center;
+    position: fixed;
     padding: 10px;
     z-index: 1000;
   }
 
-  header nav {
+  .nav-container nav {
     display: none;
   }
 
+  header .section-header{
+    align-items: center;
+    justify-content: space-between;
+  }
   .menu-toggle {
     display: flex;
+    margin-right: 10px;
+    z-index: 1100;
   }
 
   #app {
     display: block;
     height: auto;
-    padding-top:20px ;
+    padding-top:105px ;
   }
 
   main, aside {
