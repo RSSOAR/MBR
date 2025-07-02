@@ -500,73 +500,8 @@ input{
 }
 
 
-footer .footer-area_container{
-    display: flex;
-    flex-direction: column;
-    height: 235px;
-    background:  #f4f4f4;
-    color: rgb(42, 41, 41);
-    padding: 1.5rem 2rem;
-    font-size: 0.9rem;
-    border-top: 3px solid  #fec60d;
-}
-footer .footer-container_contato {
-  display: flex;
-  justify-content:space-between ;
-}
-
-footer .footer-navegacao{
-  display: flex;
-  flex-direction: column;
-  text-align: left ;
-} 
-footer .footer-navegacao a{
-color: rgb(43, 21, 6);
-font-size: 1rem;
-padding-block:2px;
-font-weight: 600;
-}
-footer .footer-navegacao a:hover{
-  color: rgb(174, 85, 26);
-}
-
-footer .socials {
-  margin-bottom: 1rem;
-}
-footer address {
-  font-size: 1rem;
-  font-weight: 600;
-  line-height: 1.7;
-  color:#011601;
-}
-footer address a{
-  color: #011601;
-}
-footer address a:hover{
-  color:#00b300;
-}
-.footer-contato address i {
-  margin-right: 10px;
-  color: black;
-  min-width: 18px;
-}
-footer h2{
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
-footer .copywrite{
-  display: flex;
-  justify-content: center;
-  align-items: center ;
-  background-color: #00b300;
-  color: #eaebea;
-  height: 55px;
-  font-size: 1.15rem;
-  font-weight: 700;
-}
 /* ========== RESPONSIVO: CELULAR ========== */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     /* HEADER */
   header {
     display: flex;
@@ -593,6 +528,10 @@ footer .copywrite{
     display: block;
     height: auto;
     padding-top:105px ;
+
+    & main .main-container h1{
+      font-size: 1.4rem;
+    }
   }
 
   main, aside {
@@ -651,6 +590,7 @@ footer .copywrite{
   .flex, .flex-1, .flex-2 {
     flex: 1 1 100%;
   }
+
 }
 
 /* ========== RESPONSIVO: TABLET ========== */
@@ -706,6 +646,7 @@ footer .copywrite{
   .flex-1, .flex-2 {
     flex: 1;
   }
+
 }
 
 @media (width>=1280px){

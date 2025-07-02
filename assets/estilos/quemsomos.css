@@ -56,90 +56,13 @@
 
 
 
-@media screen and (max-width: 80px){
-      header {
-        display:flex;
-        align-items:center;
-        justify-content: space-between;
-        padding-inline: 10px;
-	    }
-      header  .section-header{
-        margin:0;
-      }
-      header nav {
-        display: none;
-      }
-      .menu-toggle {
-        display: flex;
-      }
-
-      .whatsapp-icon {
-        width: 45px; /* Largura da imagem */
-        height: 45px; /* Altura da imagem */
-       }
-      .whatsapp-button {
-      width: 40px;
-      height: 40px;
-      right:6.5%;
-      bottom: 12.5%;
-      }
-      .topo{
-      right: 6.5%;
-      bottom: 6%;
-      }
-        
-    .topo img{
-      height:35px;
-      width: 35px;
-    }
-
-
-
-      footer{
-      display:flex;
-      flex-direction:column;
-      }
-      footer .footer-container_contato{
-      width: 100vw;
-      display:flex;
-      flex-direction: column;
-      justify-content:center;
-      align-items: normal;
-      }
-      footer .footer-area_container{
-      height:100%
-      }
-
-      .footer-navegacao{
-      padding-block: 1.3rem;
-      }
-
-      footer .footer-container_img{
-      margin: 0 auto;
-      }
-
-      footer .copywrite{
-      font-size: .7rem;
-      }
-
-/* Configuração da página QUEM SOMOS */
-     .container-content_mvv{
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-      }
-      .container-mvv{
-      min-width: 100%;
-     }
-
-} 
 
 /* RESET PARA RESPONSIVIDADE BEM CONTROLADA */
 * {
   box-sizing: border-box;
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 767px) {
   
   /* HEADER */
   header {
@@ -159,25 +82,25 @@
 
   /* WHATSAPP BUTTON */
   .whatsapp-icon {
-    width: 45px;
-    height: 45px;
+    width: 46px;
+    height: 46px;
   }
 
   .whatsapp-button {
-    width: 40px;
-    height: 40px;
-    right: 6.5%;
+    width: 42px;
+    height: 42px;
+    right: 5.5%;
     bottom: 12.5%;
   }
 
   .topo {
-    right: 6.5%;
+    right: 5.5%;
     bottom: 6%;
   }
 
   .topo img {
-    width: 35px;
-    height: 35px;
+    width: 37px;
+    height: 37px;
   }
 
   /* SECTIONS */
