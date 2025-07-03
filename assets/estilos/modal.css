@@ -62,7 +62,7 @@ main .main-container{
   justify-content: center;
   position: fixed;
   z-index: 2;
-  bottom: 10px;
+  bottom: 12px;
   right:218px;
   border-radius: 50%;
   transition: opacity 0.5s ease-in-out;
@@ -119,7 +119,7 @@ main .main-container{
 
   #btn-topo{
     right: 15px;
-    bottom: 18px;
+    bottom: 38px;
   }
 
 }
