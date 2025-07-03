@@ -1,0 +1,128 @@
+@import url("./global.css");
+   /* INICIO DA CONFIGURAÇÃO DO MENU */
+header{
+	background-color: #006400;  
+	color: white;
+}
+   
+header  .section-header{
+     width: 100vw;
+	   display: flex;
+	   max-width: 1280px;
+     align-items: end;
+	   justify-content:space-between;
+     margin: auto;
+     padding-inline:3%;
+}
+.nav-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.logo > img {
+      transition: height 0.3s ease;
+}
+nav {
+      display: flex;
+      gap: 1.5rem;
+      
+}
+nav a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: color 0.3s;
+  margin-bottom: 25px;
+  padding: 5px;   
+
+
+}
+nav a:hover {
+  color: #f8c42d;
+}
+nav a#item_coleta{
+  background-color:#FFD700 ;
+  color:#087008;
+  border-radius: 10px;
+} 
+nav a#item_coleta:hover{
+  color:#053b16;
+  background-color:#edca02 ;
+}
+
+ /* INICIO DA CONFIGURAÇÃO DO MENU MOBILE */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
+}
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  justify-content: start;
+  padding-top: 35px;
+  transition: left 0.8s ease;
+  z-index: 1000;
+}
+.mobile-menu.active {
+  left: 0;
+}
+.mobile-menu a {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  margin: 1rem 0;
+}
+.close-btn {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+/* ========== RESPONSIVO: CELULAR ========== */
+@media screen and (max-width: 767px) {
+    /* HEADER */
+  header {
+    display: flex;
+    padding: 10px;
+  }
+
+  .nav-container nav {
+    display: none;
+  }
+
+  header .section-header{
+    align-items: center;
+    justify-content: space-between;
+  }
+  .menu-toggle {
+    display: flex;
+    margin-right: 10px;
+    z-index: 1100;
+  }
+}

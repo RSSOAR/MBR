@@ -1,0 +1,125 @@
+@import url(./contato.css);
+body{
+  position: relative;
+  background-image: url("../IMG/img-modal.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#app{
+  display:flex;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 30px;
+}
+main{
+  width:70%;
+  background-color: rgba(255, 255, 255, 0.9);
+  scroll-behavior: smooth;
+
+  & .main-container h1{
+    font-size: 2rem;
+  }
+
+  & .main-container .back img{
+    width: 25px;
+  }
+
+  & .main-container .back span{
+    font-size: 1.3rem;
+  }
+
+
+}
+main .main-container{
+  width: 100%;
+  max-width: 90rem;
+  margin-left: auto;
+
+}
+
+.modal{
+	background-color: transparent;
+	z-index:4000;
+	position: fixed;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+}
+.mascara-modal{ 
+ 	transition: visibility 1s linear ;
+	z-index: 3000;
+	position: fixed;
+	inset:0;  /* Atalho para todos os lados do position (right, left, top, bottom) */
+	width:100vw;
+	height:100vh;
+	background: linear-gradient(109deg, rgba(10, 12, 16, 0.90) 15%, rgba(10, 12, 16, 0.70) 50%, rgba(10, 12, 16,0.90) 85%);
+}
+/* Botão voltar ao topo suave */
+#btn-topo {
+  opacity:1;
+  background-color: #006400;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 2;
+  bottom: 12px;
+  right:218px;
+  border-radius: 50%;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#btn-topo img{
+  height:29px;
+  width: 29px;
+  filter: invert(1);
+
+}
+
+
+
+/* Configuração Celular */
+@media  (min-width: 320px) and (max-width:920px){
+
+  body{
+    position:static;
+    background:none;
+  }
+
+	main{
+		width:100%;
+		& .main-container .back img{
+			width: 18px;
+		}
+		
+		& .main-container .back span{
+			font-size: 0.9rem;
+		}
+		
+	}
+	
+	main .main-container{
+		max-width: 90vw;
+
+    & h1{
+      font-size: 1,8rem;
+    }
+	}
+	
+  .mascara-modal{
+    visibility: hidden;
+  }
+	.modal{
+	 width:99vw;
+   height: 100vh;
+  }
+  button {
+    flex: 1 1 45%;
+    text-align: center;
+  }
+
+  #btn-topo{
+    right: 15px;
+    bottom: 38px;
+  }
+
+}

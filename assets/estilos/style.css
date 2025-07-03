@@ -1,0 +1,332 @@
+@charset "UTF-8";
+      /* Reset e base */
+
+   /* INICIO DA CONFIGURAÇÃO DO MENU */
+header{
+	background-color: #006400;  
+	color: white;
+}
+   
+header  .section-header{
+     width: 100vw;
+	   display: flex;
+	   max-width: 1280px;
+     align-items: end;
+	   justify-content:space-between;
+     margin: auto;
+     padding-inline:3%;
+}
+.nav-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.logo > img {
+      transition: height 0.3s ease;
+}
+nav {
+      display: flex;
+      gap: 1.5rem;
+      
+}
+nav a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: color 0.3s;
+  margin-bottom: 25px;
+  padding: 5px;   
+
+
+}
+nav a:hover {
+  color: #f8c42d;
+}
+nav a#item_coleta{
+  background-color:#FFD700 ;
+  color:#087008;
+  border-radius: 10px;
+} 
+nav a#item_coleta:hover{
+  color:#053b16;
+  background-color:#edca02 ;
+}
+
+ /* INICIO DA CONFIGURAÇÃO DO MENU MOBILE 
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
+}
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  justify-content: start;
+  padding-top: 35px;
+  transition: left 0.8s ease;
+  z-index: 1000;
+}
+.mobile-menu.active {
+  left: 0;
+}
+.mobile-menu a {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  margin: 1rem 0;
+}
+.close-btn {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+} */
+
+  main{
+    position:relative;
+  }
+
+  /* Incio da configuração content-one */
+  .content-one h1{
+    color:#4e2102;
+  }
+  .content-one h2{
+    color: #025104;
+    padding: 0 0 2% 2%;
+
+  }
+  .img-background{
+    display: flex;
+    height:	calc(100vh - 70px);
+    padding: 80px 0;
+    padding-inline: 40px;
+    position: relative;
+    background-image: url('../IMG/img02_peq-Sustentabilidade.jpeg'); 
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position:bottom;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  .img-background::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+  /*  background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.9)); */
+    background: linear-gradient(109deg, rgba(10, 12,16,0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+    z-index: 1;
+    opacity: 0.7;
+  }
+
+  .content-img{
+      position: relative;
+      z-index: 2;
+      margin-left: 28%;
+  }
+  .content-img img{
+    width:240px;
+  }
+
+  .content-text{
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+  }
+  .content-text h1 {
+    font-size: 2.2rem;
+    margin: 0;
+    padding: 0;
+    color:#f4f4f4;
+  }
+  .content-text p{
+  font-size: 1.8rem;
+  margin-top: 0.5em;
+  color: #f4f4f4;
+  }
+  .content-text nav a{
+    position: relative;
+    z-index: 2;
+    margin-top: 35px;
+    padding:12px;
+    background-color:#fec60d ;
+    color:#087008;
+    border-radius: 10px;
+  } 
+  .content-text a:hover{
+    font-weight: 800;
+    color:#013e14;
+    background-color:#fed802 ;
+  }
+
+
+  /* inicio configuração Reciclagem */
+  .content-reciclagem{
+    margin:45px 9px 5px 25px;
+
+    & .shadow{
+      justify-content: center;
+      border-radius: 20px;
+      background-color: #fff;
+      box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.2);
+
+    }
+  }
+  .content-recicla_text{
+    flex:1;
+
+  }
+  .content-recicla_container{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100vw;
+    height: 100%;
+    gap:18px;
+    margin-top: 30px;
+    justify-content: center;
+
+  }
+  .content-recicla_img{
+    width: 100%;
+    display: flex;
+    flex: 1;
+    padding-block: 2px;
+  }
+  .content-recicla_img img{
+    width: 99%;
+    border-radius: 12px;
+  }
+  .content-recicla_img02, .content-recicla_img03 {
+    width: 76%;
+    display: flex;
+    flex: 1;
+    padding-block: 2px;
+  }
+  .content-recicla_img02 img, .content-recicla_img03 img{
+    width: 100%;
+    border-radius: 12px;
+  } 
+  .content-recicla_text02{
+    padding:20px 10px 0 0 ;
+  }
+
+  /*inicio da configuração seção coleta */
+  #section-coleta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 45px 25px 5px 25px;
+
+  }
+  #section-coleta p{
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5rem;
+  }
+  #section-coleta h2{
+    font-family: "Roboto", sans-serif;
+    font-size: 2.9rem;
+  }
+  #section-coleta h3{
+    font-family: "Roboto", sans-serif;
+    font-size: 1.2rem;
+    color: #0f1f14;
+  }
+  .container-content_coleta{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding-block: 1%;
+    justify-content: center;
+    gap: 28px;
+  }
+
+  .container-img{
+    display: flex;
+    flex-direction: column;
+    padding-inline: 15px;
+    align-items: center;
+    justify-content:space-around;
+    text-align: justify;
+    width: 35%;
+    height: 70vh;
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+  }
+  .content-saibamais{
+    display: flex;
+    width: 100%;
+    height: 30vh;
+    align-items: baseline;
+    justify-content: center;
+    gap:20px;
+    margin-top:50px;
+
+  }
+  .content-saibamais > h4{
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 28px;
+  }
+
+  /*Configuração Botão */ 
+  #section-coleta .btn-saibamais{
+    display:inline-flex ;
+    align-items: center;
+    gap: 10px;
+    background-color:#0bb64a;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  #section-coleta .btn-saibamais:hover{
+    background-color: #147f3f;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+  .btn-saibamais i{
+      font-size: 1.2rem;
+      font-weight: 800;
+    }
+    /* Efeito de clique */
+  .btn-saibamais:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+
+
+
+
+
+    
