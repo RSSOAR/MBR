@@ -166,12 +166,13 @@ img {
 
 main{
   overflow:auto;
-  padding:1rem 3rem 3rem ;
+  padding:1rem 1rem 1rem ;
   max-width: 1280px;
+  margin:25px 5px 5px 5px;
   
   /* Configurando a larg máxima do main container */
   & .main-container {
-  max-width: 40rem;
+  max-width: 41rem;
   margin-left: auto;
 
     & h1{
@@ -528,6 +529,10 @@ input{
     display: block;
     height: auto;
     padding-top:105px ;
+
+    & main .main-container{
+       margin:25px 25px 5px 25px;
+    }
 
     & main .main-container h1{
       font-size: 1.4rem;
