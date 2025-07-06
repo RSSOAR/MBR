@@ -62,45 +62,7 @@ function scroll(event){
 }
 
 linkInterno.addEventListener('click', scroll)
-    // Validação simples do formulário
-    const form = document.getElementById('contactForm');
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
 
-      const name = form.name.value.trim();
-      const email = form.email.value.trim();
-      const message = form.message.value.trim();
-
-      if (!name || !email || !message) {
-        alert('Por favor, preencha todos os campos.');
-        return;
-      }
-
-      // Simula envio de formulário
-      alert('Mensagem enviada com sucesso! Obrigado, ' + name + '.');
-      form.reset();
-    });
-
-    /*Ajuste da rolagem para header fixo com altura 
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-
-      const targetID = this.getAttribute('href').substring(1);
-      const targetElement = document.getElementById(targetID);
-
-      if (targetElement) {
-        const headerOffset = 120; // altura do header fixo
-        const elementPosition = targetElement.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth'
-        });
-      }
-    });
-  });*/
 
   
 	

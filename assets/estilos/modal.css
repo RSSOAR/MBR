@@ -4,12 +4,14 @@ body{
   background-image: url("../IMG/img-modal.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  border: 2px solid rgb(176, 5, 93);
 }
 #app{
   display:flex;
   width: 100vw;
   height: 100vh;
   padding-top: 30px;
+  justify-content: center;
 }
 main{
   width:70%;
@@ -83,10 +85,12 @@ main .main-container{
   body{
     position:static;
     background:none;
+    overflow-x: hidden;
   }
-
+  
 	main{
 		width:100%;
+    padding: 16px;
 		& .main-container .back img{
 			width: 18px;
 		}
@@ -99,9 +103,9 @@ main .main-container{
 	
 	main .main-container{
 		max-width: 90vw;
-
+    margin: 0 auto; /* centraliza horizontalmente */
     & h1{
-      font-size: 1,8rem;
+      font-size: 1.8rem;
     }
 	}
 	
