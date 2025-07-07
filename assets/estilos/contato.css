@@ -507,7 +507,7 @@ input{
   header {
     display: flex;
     position: fixed;
-    padding: 10px;
+    padding-block: 9px;
     z-index: 1000;
   }
 
@@ -516,9 +516,11 @@ input{
   }
 
   header .section-header{
+    max-width: 98%;
     align-items: center;
     justify-content: space-between;
-    border: 2px solid black;
+    padding-inline: 10px;
+    margin:0 auto ;
   }
   .menu-toggle {
     display: flex;

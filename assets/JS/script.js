@@ -61,7 +61,7 @@ function scroll(event){
   })
 }
 
-linkInterno.addEventListener('click', scroll)
+linkInterno.addEventListener('click', scroll) 
 
 
   

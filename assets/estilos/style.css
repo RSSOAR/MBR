@@ -218,7 +218,8 @@ nav a#item_coleta:hover{
     border-radius: 12px;
   }
   .content-recicla_img02, .content-recicla_img03 {
-    width: 76%;
+    max-width: 42vw;
+    max-height: 93vh;
     display: flex;
     flex: 1;
     padding-block: 2px;

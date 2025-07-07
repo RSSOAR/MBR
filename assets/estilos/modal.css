@@ -85,12 +85,10 @@ main .main-container{
   body{
     position:static;
     background:none;
-    overflow-x: hidden;
   }
-  
 	main{
-		width:100%;
-    padding: 16px;
+		width:100vw;
+    overflow-x: hidden;
 		& .main-container .back img{
 			width: 18px;
 		}
@@ -102,8 +100,9 @@ main .main-container{
 	}
 	
 	main .main-container{
-		max-width: 90vw;
+		max-width: 90%;
     margin: 0 auto; /* centraliza horizontalmente */
+    margin:25px 25px 5px 25px;
     & h1{
       font-size: 1.8rem;
     }
