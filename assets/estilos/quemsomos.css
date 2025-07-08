@@ -102,6 +102,35 @@
             border-radius: 16px;
 }
 
+section #localizacao {
+  width: 90vw;
+  display: block;
+  text-align: center;
+  min-width: 90vw;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 70px;
+}
+section #localizacao  h3 {
+  display: inline-block;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  float: left;
+  margin-block:30px;
+  border-bottom:3px solid #f88511;
+  white-space: normal; /* Permite quebra de linha */
+}
+
+section #localizacao #frames iframe {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 80vh;
+  border-radius: 12px;
+  margin: 1.5rem auto 1.4rem auto;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+}
+
 
 
 
@@ -221,5 +250,30 @@
     }
 
 }
+/* Configuração Tablet */
+@media screen and (min-width: 768px) and (max-width: 885px){
+  /* MVV SECTION */
+  .container-content_mvv {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-inline: 10px;
+    gap: 20px;
+  }
 
+  .container-mvv {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 10px;
+    text-align: left;
+  }  
+
+    /* VÍDEOS */
+  .video-container {
+    width: 100%;
+    max-width: 100%;
+    padding-bottom: 56.25%;
+    margin-block: 25px;
+  }
+
+}
 

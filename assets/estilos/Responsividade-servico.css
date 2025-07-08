@@ -1,0 +1,128 @@
+/* ========== RESPONSIVO MAIN: CELULAR E TABLET (até 1024px) ========== */
+@media screen and (max-width: 1024px) {
+  /* Container geral do main */
+  main #main-container {
+    margin: 20px;
+  }
+
+  main #main-container h1 {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  /* ========= SEÇÃO: COLETA-SERVICO01 ========= */
+  .coleta-servico01 {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .coleta-servico01 > div {
+    width: 100%;
+  }
+
+  .coleta-servico01 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .conteudo-texto01 h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  /* ========= SEÇÃO: COLETA-SERVICO02 ========= */
+  .coleta-servico02 {
+    text-align: center;
+    padding: 10px;
+  }
+
+  #container-imagem {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  #container-imagem > div {
+    width: 100%;
+  }
+
+  #container-imagem img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* ========= SEÇÃO: COLETA-SERVICO03 ========= */
+  .coleta-servico03 {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .conteudo-texto03 h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .conteudo-texto03 p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .coleta-servico03 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* ========= SEÇÃO: AGENDAMENTO ========= */
+  .agendamento_servico {
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .botao-agendamento_servico {
+    font-size: 1.1rem;
+    padding: 12px 25px;
+    background-color: #d41717;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .botao-agendamento_servico:hover {
+    background-color: #b91515;
+  }
+
+  /* ========= WHATSAPP E VOLTAR AO TOPO ========= */
+  .whatsapp-button {
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .btn-voltar {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    z-index: 999;
+  }
+
+  .topo img {
+    width: 45px;
+  }
+}

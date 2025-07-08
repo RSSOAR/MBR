@@ -125,7 +125,7 @@ main #main-container .container-servico{
   }
   & .coleta-servico01, .coleta-servico03{
     display: grid;
-    grid-template-columns:  repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns:  repeat(auto-fit, minmax(250px, 1fr)); 
     gap: 25px;
 
     & .conteudo-texto01 h2, .conteudo-texto03 h2{
@@ -144,7 +144,6 @@ main #main-container .container-servico{
      max-width: 100%;
      height: 99.95%;
      display: block;
-     object-fit: cover;
      border-radius: 19px;
     }
   }
@@ -239,7 +238,7 @@ main #main-container .container-servico{
 
 
 /* ========== RESPONSIVO: CELULAR ========== */
-@media screen and (max-width: 765px) {
+@media screen and (max-width: 767px) {
     /* HEADER */
   header {
     display: flex;
@@ -327,13 +326,13 @@ main #main-container .container-servico{
 }
 
 /* Configuração Tablet */
-@media (min-width: 767px) and (max-width: 890px) {
-  	main #main-container .container-servico {
-		& .coleta-servico01, .coleta-servico03{
+@media (min-width: 768px) and (max-width: 890px) {
+	
+	main #main-container .container-servico {
+		& .coleta-servico01{
 		    grid-template-columns:  repeat(auto-fit, minmax(450px, 1fr)) !important; 
+		    background-color:red;
 		}
 	}
-
-} 
-
+}
   
