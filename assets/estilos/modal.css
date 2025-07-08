@@ -87,7 +87,7 @@ main .main-container{
     background:none;
   }
 	main{
-		width:100vw;
+		min-width:100vw;
     overflow-x: hidden;
 		& .main-container .back img{
 			width: 18px;
