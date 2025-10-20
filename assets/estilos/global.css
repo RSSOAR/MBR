@@ -26,7 +26,7 @@
     h1 {
       font-family: "Roboto", sans-serif;
       font-weight: 800;
-      font-size: 2.1rem;
+      font-size: 1.8rem;
       margin-bottom: 1rem;
       color: #006400;
     }
@@ -152,12 +152,13 @@ nav a {
   font-weight: 700;
   transition: color 0.3s;
   margin-bottom: 25px;
-  padding: 5px;   
+  padding: 5px; 
+  
 
 
 }
 nav a:hover {
-  color: #f8c42d;
+  color: #c2c2c2;
 }
 nav a#item_coleta{
   background-color:#FFD700 ;

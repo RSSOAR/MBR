@@ -1,5 +1,10 @@
+nav .active{
+  color: #f88511;
+}
+
 /* Configuração menu Mobile */
  /* INICIO DA CONFIGURAÇÃO DO MENU MOBILE */
+
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -53,9 +58,10 @@
 }
 .sections h1{
   display: inline-block;
+  font-size:1.9rem;
   margin-top:30px;
-  border-bottom:3px solid #f88511;
-}
+ /* border-bottom:3px solid #f88511; */
+} 
 .sections p{
   font-family: "Roboto", sans-serif;
   font-size: 1.4rem;
@@ -194,7 +200,7 @@ section #localizacao #frames iframe {
   }
 
   .sections h1 {
-    font-size: 1.4rem;
+    font-size: 1rem;
   }
 
   /* MVV SECTION */
