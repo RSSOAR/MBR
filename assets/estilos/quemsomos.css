@@ -200,7 +200,11 @@ section #localizacao #frames iframe {
   }
 
   .sections h1 {
-    font-size: 1rem;
+    font-size: 2rem;
+  }
+
+  section #localizacao h3{
+    font-size: 2.3rem;
   }
 
   /* MVV SECTION */
@@ -231,6 +235,10 @@ section #localizacao #frames iframe {
       display:flex;
       flex-direction:column;
       pad: 20px;
+
+      h2{
+        font-size: 1.5rem;
+      }
     }
     footer .footer-container_contato{
       width: 100%;

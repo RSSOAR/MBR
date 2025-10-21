@@ -103,11 +103,10 @@ main .main-container{
 		max-width: 90%;
     margin: 0 auto; /* centraliza horizontalmente */
     margin:25px 25px 5px 25px;
-    & h1{
-      font-size: 1.8rem;
-    }
 	}
-	
+	main h1{
+    font-size: 2rem !important;
+  }
   .mascara-modal{
     visibility: hidden;
   }
