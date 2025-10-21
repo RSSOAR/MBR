@@ -74,6 +74,12 @@
                     <label for="data">Data do agendamento</label>
                     <input type="date" id="data" lang="pt-br" name="data">
                   </div>
+		    
+		    <div class="input-wrapper">
+			<label for="litros">Quantidade de Litros para Coleta</label>
+			<input type="number" id="litros" min="1" name="litros">
+		  </div>
+	     
                   <fieldset class="enroll-options">
                     <legend>Opções de coleta</legend>
                     <div class="input-wrapper">
@@ -99,9 +105,6 @@
 
                     </div>
                   </fieldset>
-
-
-                  
                   <!--</div>-->
 
                 </fieldset>
@@ -247,7 +250,7 @@
       const dataISO = form.data.value;
       const [ano, mes, dia] = dataISO.split("-");
       const data = `${dia}/${mes}/${ano.slice(2)}`;
-      //const data = form.data.value;
+      const litros = form.litros.value;
       const rua = form.Street.value;
       const numero = form.number.value;
       const complemento = form.complemento.value;
@@ -258,13 +261,14 @@
       const turnoTexto = turno === "morning" ? "Manhã" : "Tarde";
       
       const mensagem =
-  `*Solicitação de Agendamento:*
+  `*Solicitação de Agendamento para Coleta de òleo:*
 
   *Nome:* ${nome}
   *Empresa:* ${empresa}
   *E-mail:* ${email}
   *Telefone:* ${form.phone.value}
   *Data do agendamento:* ${data}
+  *Quantidade de Litros:* ${litros} Litros
   *Turno:* ${turnoTexto}
 
   *Endereço de retirada:*
@@ -275,7 +279,7 @@
   *Dúvida:* ${duvida}`;
 
       // WhatsApp
-      const numeroWhatsApp = "552136543128"; // Altere para seu número
+      const numeroWhatsApp = "5521995588692"; // Altere para seu número
       const link = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
       window.open(link, "_blank");
       alert("Agendamento iniciado com sucesso! Você será redirecionado ao WhatsApp.");
