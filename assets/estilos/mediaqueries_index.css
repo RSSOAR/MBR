@@ -226,12 +226,14 @@
       }
 
       
-    }
+    
 		
 	}
   .container-img{
     height: 50vh;
     text-align:justify;
+    }
+    
   }
   .content-saibamais{
     flex-direction: column;
@@ -248,7 +250,7 @@
    
 @media screen and (width >=1280px){
   main{
-    max-width: 1200px;
+    max-width: 1440px;
   }
 }
     
